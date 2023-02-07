@@ -68,7 +68,7 @@ nav .main-nav .menu-list ul li {
 
 nav .main-nav .menu-list ul li:first-child {
     border-left: 2px solid #adff2f;
-  
+
 }
 
 nav .main-nav .menu-list ul li:hover {
@@ -199,6 +199,13 @@ header .button-container {
     border-radius: 50px;
     background-color: transparent;
     color: white;
+    transition: transform .3s;
+
+}
+
+#upgrade-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
