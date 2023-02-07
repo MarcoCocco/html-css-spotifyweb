@@ -180,11 +180,26 @@ nav .bottom-nav .user-profile h2:hover {
 /* FINE NAVBAR LATERALE */
 
 .header-main-container {
+    width: calc(100% - 230px);
     display: flex;
     flex-direction: column;
+    background-color: #141922;
 }
 
+header .button-container {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+#upgrade-button {
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+}
 
 
 
