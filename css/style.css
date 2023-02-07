@@ -42,20 +42,29 @@ nav {
 }
 
 nav .main-nav {
-    padding: 20px;
+
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
+
 nav .main-nav .logo img {
+    padding: 20px 0 0 20px;
     width: 80%;
 }
 
 nav .main-nav .menu-list ul li {
+    padding-left: 18px;
+    border-left: 2px solid black;
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+nav .main-nav .menu-list ul li:first-child {
+    border-left: 2px solid #adff2f;
+  
 }
 
 nav .main-nav .menu-list ul li:hover {
@@ -64,8 +73,12 @@ nav .main-nav .menu-list ul li:hover {
 }
 
 nav .main-nav .menu-list ul li img {
-    margin: 5px;
+    margin: 5px 5px 5px 0;
     height: 25px;
+}
+
+nav .main-nav .playlist-section {
+    padding-left: 20px;
 }
 
 nav .main-nav .playlist-section h2 {
