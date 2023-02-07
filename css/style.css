@@ -6,6 +6,158 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+
+    /*test*/
+    background-color: grey;
+    color: #7d7f84;
+}
+
+li {
+    list-style-type: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #717171;
+}
+
+.tw {
+    color: white;
 }
 
 /* COMMONS */
+
+.general-container {
+    display: flex;
+}
+
+nav {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    font-weight: 600;
+}
+
+nav .main-nav {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+nav .main-nav .logo img {
+    width: 80%;
+}
+
+nav .main-nav .menu-list ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav .main-nav .menu-list ul li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+nav .main-nav .menu-list ul li img {
+    margin: 5px;
+    height: 25px;
+}
+
+nav .main-nav .playlist-section h2 {
+    font-size: 1em;
+}
+
+nav .main-nav .playlist-section .make-playlist {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+nav .main-nav .playlist-section .make-playlist .add {
+    margin-right: 5px;
+    background-color: #a3a3a3;
+    color: black;
+    font-size: 2em;
+    padding: 0 10px;
+}
+
+nav .main-nav .playlist-section .make-playlist .add-text:hover {
+    cursor: pointer;
+    color: white;
+}
+
+nav .main-nav .playlist-section .make-playlist .add:hover {
+    cursor: pointer;
+}
+
+nav .main-nav .playlist-section .created-playlists ul li {
+    padding: 5px 0;
+    font-size: .8em;
+}
+
+nav .main-nav .playlist-section .created-playlists ul li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+nav .bottom-nav {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav .bottom-nav .download-app {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav .bottom-nav .download-app .download-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+nav .bottom-nav .download-app .download-img img {
+    width: 100%;
+}
+
+nav .bottom-nav .download-app span {
+    font-size: .8em;
+}
+
+nav .bottom-nav .download-app span:hover {
+    cursor: pointer;
+    color: white;
+}
+
+nav .bottom-nav .user-profile {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav .bottom-nav .user-profile .profile-icon .fa-user {
+    margin-right: 5px;
+    padding: 4px 6px;
+    font-size: 1.6em;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+}
+
+nav .bottom-nav .user-profile h2 {
+    font-size: 1em;
+}
+
+nav .bottom-nav .user-profile h2:hover {
+    cursor: pointer;
+}
+
+/* FINE NAVBAR LATERALE */
