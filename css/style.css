@@ -190,10 +190,11 @@ header .header-container {
     width: calc(100% - 230px);
     padding: 20px;
     position: fixed;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 header .header-container .main-menu-list {
@@ -208,6 +209,7 @@ header .header-container .main-menu-list ul {
 header .header-container .main-menu-list ul li {
     width: calc(100% / 6);
     display: inline-block;
+    font-size: .8em;
     text-align: center;
 }
 
@@ -274,14 +276,46 @@ p {
 
 main .row .col .album-image {
     width: 100%;
+    position: relative;
 }
 
 main .row .col .album-image img {
     width: 100%;
+    display: block;
 }
 
 .row .col .special img {
     border-radius: 50%;
+}
+
+.image-hover-container {
+    width: 100%;
+    height: 100%;
+}
+
+.image-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: opacity(0);
+}
+
+.hover-play-icon {
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+}
+
+.image-hover:hover {
+    filter: opacity(1);
+    cursor: pointer;
 }
 
 /* FINE MAIN */
@@ -396,11 +430,42 @@ footer li {
     background-color: #5a5a5a;
 }
 
+
 .footer-center .player-track-timer .timer-bar .timer-bar-perc {
+    position: relative;
     width: 15%;
     height: 100%;
     border-radius: 2px;
     background-color: white;
+}
+
+#timer-bar-perc-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #adff2f;
+}
+
+#hover-circle {
+    position: absolute;
+    bottom: -9px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.hover-container {
+    filter: opacity(0);
+}
+
+.hover-container:hover {
+    filter: opacity(1);
+    cursor: pointer;
 }
 /* Fine Footer-center */
 
