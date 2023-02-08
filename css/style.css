@@ -186,11 +186,38 @@ nav .bottom-nav .user-profile h2:hover {
     background-color: #141922;
 }
 
-header .button-container {
+header .header-container {
+    width: calc(100% - 230px);
     padding: 20px;
+    position: fixed;
     display: flex;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .header-container .main-menu-list {
+    width: 100%;
+}
+
+header .header-container .main-menu-list ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .header-container .main-menu-list ul li {
+    display: inline-block;
+}
+
+.header-container .main-menu-list ul li a {
+    text-decoration: none;
+    font-size: .8em;
+    font-weight: 600;
+    color: #7d7f84;
+}
+
+.header-container .main-menu-list ul li a:hover {
+    color: white;
 }
 
 #upgrade-button {
@@ -198,9 +225,9 @@ header .button-container {
     border: 2px solid white;
     border-radius: 50px;
     background-color: transparent;
+    white-space: nowrap;
     color: white;
     transition: transform .3s;
-
 }
 
 #upgrade-button:hover {
@@ -208,30 +235,60 @@ header .button-container {
     cursor: pointer;
 }
 
+/* FINE HEADER */
 
+main {
+    padding: 100px 20px 20px 20px;
+    overflow: auto;
+    color: white;
 
+}
 
+main .section-title {
+    margin: 20px 0;
+}
 
+main .row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
 
+main .row .col .album-title {
+    width: 200px;
+    padding-top: 10px;
+    text-align: center;
+}
 
+main .row .col .album-title h4,
+p {
+    margin-top: 8px;
+    font-size: .8em;
+}
 
+main .row .col .album-image {
+    width: 200px;
+}
 
+main .row .col .album-image img {
+    width: 100%;
+}
 
+.row .col .special img {
+    border-radius: 50%;
+}
 
-
-
-
-
-
-
-
-
-
+/* FINE MAIN */
 
 footer {
+    width: 100%;
     height: 90px;
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
     background-color: #282828;
+    font-weight: 600;
+    color: #7d7f84;
 }
 
 footer li {
@@ -239,13 +296,115 @@ footer li {
 }
 
 .footer-left {
+    width: 100%;
+    max-width: 230px;
+    padding: 20px 10px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
+
+.footer-left .footer-album-img {
+    height: 100%;
+}
+
+.footer-left .footer-album-img img {
+    height: 100%;
+}
+
+.footer-left .footer-album-title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.footer-left .footer-album-title #footer-track-title {
+    display: block;
+    font-size: .8em;
+}
+
+.footer-left .footer-album-title span {
+    font-size: .6em;
+}
+
+.footer-left .footer-album-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-left .footer-left-icons .fa-regular:hover {
+    cursor: pointer;
+    color: white;
+}
+
+/* Fine Footer-left*/
 
 .footer-center {
+    width: 100%;
+    max-width: 550px;
+    min-width: 225px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
 }
 
+.footer-center .player-controller-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 1.2em;
+
+}
+
+.footer-center .player-controller-icons .fa-circle-play {
+    font-size: 1.8em;
+    transition: transform .1s;
+}
+
+.footer-center .player-controller-icons i:hover {
+    cursor: pointer;
+}
+
+.footer-center .player-controller-icons .fa-circle-play:hover {
+    transform: scale(1.2);
+}
+
+.footer-center .player-track-timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: .6em;
+}
+
+.footer-center .player-track-timer .timer-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #5a5a5a;
+}
+
+.footer-center .player-track-timer .timer-bar .timer-bar-perc {
+    width: 15%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: white;
+}
+/* Fine Footer-center */
+
 .footer-right {
+    background-color: red;
+    border: 1px solid black;
+    /*test*/
+
+    width: 100%;
+    max-width: 230px;
     display: flex;
 }
