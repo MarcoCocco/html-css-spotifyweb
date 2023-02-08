@@ -206,7 +206,9 @@ header .header-container .main-menu-list ul {
 }
 
 header .header-container .main-menu-list ul li {
+    width: calc(100% / 6);
     display: inline-block;
+    text-align: center;
 }
 
 .header-container .main-menu-list ul li a {
@@ -254,8 +256,12 @@ main .row {
     gap: 15px;
 }
 
+main .row .col {
+    width: calc(100% / 6 - 15px);
+}
+
 main .row .col .album-title {
-    width: 200px;
+    width: 100%;
     padding-top: 10px;
     text-align: center;
 }
@@ -267,7 +273,7 @@ p {
 }
 
 main .row .col .album-image {
-    width: 200px;
+    width: 100%;
 }
 
 main .row .col .album-image img {
