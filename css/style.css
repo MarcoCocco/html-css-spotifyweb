@@ -187,13 +187,11 @@ nav .bottom-nav .user-profile h2:hover {
 }
 
 header .header-container {
-    width: calc(100% - 230px);
     padding: 20px;
-    position: fixed;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -204,13 +202,26 @@ header .header-container .main-menu-list {
 header .header-container .main-menu-list ul {
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 header .header-container .main-menu-list ul li {
-    width: calc(100% / 6);
+    width: calc(100% / 6 - 10px);
     display: inline-block;
+    position: relative;
     font-size: .8em;
     text-align: center;
+}
+
+header .header-container .main-menu-list ul li.active::before {
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    content: '';
+    transform: translateX(-50%);
+    background-color: #adff2f;
 }
 
 .header-container .main-menu-list ul li a {
@@ -242,7 +253,7 @@ header .header-container .main-menu-list ul li {
 /* FINE HEADER */
 
 main {
-    padding: 100px 20px 20px 20px;
+    padding: 20px;
     overflow: auto;
     color: white;
 
@@ -259,7 +270,7 @@ main .row {
 }
 
 main .row .col {
-    width: calc(100% / 6 - 15px);
+    width: calc(100% / 6 - (15px / 6 * 5));
 }
 
 main .row .col .album-title {
@@ -509,5 +520,95 @@ footer li {
 /* Fine Footer-right */
 /* FINE FOOTER */
 
+
+
+/* MEDIA QUERIES */
+
+/* Spotify md */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    header .header-container .main-menu-list ul {
+        flex-wrap: wrap;
+    }
+
+    header .header-container .main-menu-list ul li {
+        width: calc(100% / 3 - 10px);
+    }
+
+    main .row {
+        flex-wrap: wrap;
+    }
+
+    main .row .col {
+        width: calc(100% / 4 - (15px / 4 * 3));
+    }
+
+}
+
+/* Spotify s */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    header .header-container {
+        flex-direction: column-reverse;
+    }
+
+    header .header-container .main-menu-list ul {
+        flex-wrap: wrap;
+    }
+
+    header .header-container .main-menu-list ul li {
+        width: calc(100% / 3 - 10px);
+    }
+
+    main .row {
+        flex-wrap: wrap;
+    }
+
+    main .row .col {
+        width: calc(100% / 2 - (15px / 2));
+    }
+
+}
+
+/* Spotify xs */
+@media screen and (max-width: 575px) {
+
+    nav {
+        width: 50px;
+    }
+
+    nav .main-nav {
+        display: none;
+    }
+
+    nav .bottom-nav {
+        display: none;
+    }
+
+    .header-main-container {
+        width: calc(100% - 50px);
+    }
+
+    header .header-container {
+        flex-direction: column-reverse;
+    }
+
+    header .header-container .main-menu-list ul {
+        flex-wrap: wrap;
+    }
+
+    header .header-container .main-menu-list ul li {
+        width: calc(100% / 3 - 10px);
+    }
+
+    main .row {
+        flex-wrap: wrap;
+    }
+
+    main .row .col {
+        width: calc(100% / 2 - (15px / 2));
+    }
+
+}
 
 
